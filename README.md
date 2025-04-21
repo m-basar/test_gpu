@@ -9,7 +9,7 @@ This guide provides a clean, repeatable setup process for Windows users with NVI
 
 ```bash
 python -m venv venv
-.env\Scriptsctivate
+. \venv\Scripts\activate
 ```
 
 ---
