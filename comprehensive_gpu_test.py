@@ -1,9 +1,11 @@
 import os
 import time
-import numpy as np
-import torch
-import tensorflow as tf
-import matplotlib.pyplot as plt
+import pytest
+
+np = pytest.importorskip("numpy")
+torch = pytest.importorskip("torch")
+tf = pytest.importorskip("tensorflow")
+plt = pytest.importorskip("matplotlib.pyplot")
 
 def test_pytorch():
     print("\n" + "="*50)
@@ -136,6 +138,7 @@ def test_neural_network():
 
 def test_pytorch_nn():
     # Only import these if needed
+    pytest.importorskip("torchvision")
     from torch import nn, optim
     from torch.utils.data import DataLoader
     from torchvision import datasets, transforms
